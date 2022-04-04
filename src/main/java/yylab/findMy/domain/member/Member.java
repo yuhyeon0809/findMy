@@ -1,4 +1,4 @@
-package yylab.findMy.domain;
+package yylab.findMy.domain.member;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

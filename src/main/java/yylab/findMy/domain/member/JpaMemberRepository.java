@@ -1,14 +1,13 @@
-package yylab.findMy.repository;
+package yylab.findMy.domain.member;
 
 import org.springframework.stereotype.Repository;
-import yylab.findMy.domain.Member;
 
 import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class JpaMemberRepository implements MemberRepository{
+public class JpaMemberRepository implements MemberRepository {
 
     private final EntityManager em;
 

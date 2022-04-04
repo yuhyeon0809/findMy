@@ -3,8 +3,8 @@ package yylab.findMy.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import yylab.findMy.domain.Member;
-import yylab.findMy.repository.MemberRepository;
+import yylab.findMy.domain.member.Member;
+import yylab.findMy.domain.member.MemberRepository;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,6 +1,6 @@
-package yylab.findMy.repository;
+package yylab.findMy.domain.member;
 
-import yylab.findMy.domain.Member;
+import yylab.findMy.domain.member.Member;
 
 import java.util.List;
 import java.util.Optional;

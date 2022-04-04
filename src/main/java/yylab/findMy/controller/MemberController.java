@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import yylab.findMy.domain.Member;
+import yylab.findMy.domain.member.Member;
 import yylab.findMy.service.MemberService;
 
 import java.util.List;
