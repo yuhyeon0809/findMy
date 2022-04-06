@@ -43,5 +43,11 @@ public class MemberController {
         return "redirect:/";
     }
 
+    @GetMapping("/admin/init")
+    public String init_db() {
+        memberService.init_member();
+        return "admin/initMember";
+    }
+
 
 }

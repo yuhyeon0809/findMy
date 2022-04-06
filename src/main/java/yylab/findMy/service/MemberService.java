@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import yylab.findMy.domain.member.Member;
 import yylab.findMy.domain.member.MemberRepository;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,6 +16,7 @@ import java.util.Optional;
 public class MemberService {
 
     private final MemberRepository memberRepository;
+    private final EntityManager em;
 
     public Long join(Member member) {
 
@@ -64,6 +66,22 @@ public class MemberService {
             System.out.println("fineOneMember: " + timeMs + "ms");
         }
 
+    }
+
+    public void init_member() {
+
+        long start = System.currentTimeMillis();
+
+        try {
+            em.createNativeQuery("TRUNCATE TABLE Member")
+                    .executeUpdate();
+
+
+        } finally {
+            long finish = System.currentTimeMillis();
+            long timeMs = finish - start;
+            System.out.println("init_member: " + timeMs + "ms");
+        }
     }
 
 }

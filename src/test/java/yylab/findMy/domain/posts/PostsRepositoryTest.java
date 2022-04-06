@@ -1,12 +1,17 @@
 package yylab.findMy.domain.posts;
 
+import org.aspectj.lang.annotation.After;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
+@SpringBootTest
 class PostRepositoryTest {
 
+    @Autowired
     PostsRepository postsRepository;
 
     @AfterEach
@@ -22,8 +27,8 @@ class PostRepositoryTest {
         String content = "테스트 본문";
 
         postsRepository.save(Posts.builder()
-                .title("테스트 게시물")
-                .content("테스트 본문")
+                .title(title)
+                .content(content)
                 .author("youhyun")
                 .build());
 
