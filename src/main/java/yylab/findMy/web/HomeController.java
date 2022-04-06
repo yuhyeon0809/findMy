@@ -1,4 +1,4 @@
-package yylab.findMy.controller;
+package yylab.findMy.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

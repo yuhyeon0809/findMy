@@ -1,4 +1,4 @@
-package yylab.findMy.controller;
+package yylab.findMy.web.member;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -16,12 +16,12 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    @GetMapping("/join")
+    @GetMapping("/member/join")
     public String joinForm() {
         return "member/joinForm";
     }
 
-    @PostMapping("/join")
+    @PostMapping("/member/join")
     public String join(MemberDto dto) {
         Member member = new Member();
         member.setMemberId(dto.getMemberId());
@@ -31,19 +31,19 @@ public class MemberController {
         return "redirect:/";
     }
 
-    @GetMapping("/members")
+    @GetMapping("/member/list")
     public String list(Model model) {
         List<Member> memberList = memberService.findAllMembers();
         model.addAttribute("memberList", memberList);
         return "member/memberList";
     }
 
-    @PostMapping("/members")
+    @PostMapping("/member/list")
     public String checkedList() {
         return "redirect:/";
     }
 
-    @GetMapping("/admin/init")
+    @GetMapping("/admin/initmember")
     public String init_db() {
         memberService.init_member();
         return "admin/initMember";
